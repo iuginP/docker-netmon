@@ -28,4 +28,4 @@ Grafana will require to be configured the first time the project is executed. Th
 * username: admin
 * password: admin
 
-To display the default dashboard, you need to import it from: https://github.com/iuginP/docker-netmon/grafana_speedtest_dashboard.yaml
+To display the default dashboard, you need to import it from: https://github.com/iuginP/docker-netmon/blob/master/grafana_speedtest_dashboard.yaml
