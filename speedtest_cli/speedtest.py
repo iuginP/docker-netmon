@@ -77,11 +77,15 @@ def main(argv):
     
     while True:
         print("Executing new speedtest...")
-        # Execute the speedtest
-        ping, download, upload = speedtest()
-        # Upload data to DB
-        upload_to_db(client, download, upload, ping)
-        time.sleep(time_interval)
+        try:
+            # Execute the speedtest
+            ping, download, upload = speedtest()
+            # Upload data to DB
+            upload_to_db(client, download, upload, ping)
+            time.sleep(time_interval)
+        except:
+            print("Failed extraction, proceding with the next one")
+            pass
 
 if __name__ == "__main__":
    main(sys.argv[1:])
