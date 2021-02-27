@@ -6,6 +6,7 @@ services:
     build: 
       context: ./speedtest_cli
     environment:
+      TEST_INTERVAL: 5
       INFLUXDB_USER: speedmonitor
       INFLUXDB_PASSWORD: speedpassword
       INFLUXDB_DATABASE: internetspeed
@@ -20,7 +21,6 @@ services:
     restart: unless-stopped
     image: influxdb:1.8
     environment:
-      TEST_INTERVAL: 5
       INFLUXDB_ADMIN_USER: admin
       INFLUXDB_ADMIN_PASSWORD: password
       INFLUXDB_DB: internetspeed

@@ -66,7 +66,10 @@ def main(argv):
             port = arg
         elif opt in ("-i", "--interval"):
             time_interval = arg
-    time_interval = int(time_interval)
+    try:
+        time_interval = int(time_interval)
+    except:
+        time_interval = 30
 
     if user is None or password is None or host is None:
         print('speedtest.py -i [--interval=] <minutes> -u [--user=] <user> -p [--password=] <password> -h [--host=] <host>')
