@@ -24,6 +24,13 @@ To connect to grafana go to https://localhost:3000
 
 ## Grafana configuration
 
+Create and set the right permissions to the grafana data dir:
+
+```shell
+mkdir -p grafana_data/data/grafana/
+sudo chown -R 472:1 grafana_data/data/grafana/
+```
+
 Grafana will require to be configured the first time the project is executed. The default credentials are:
 * username: admin
 * password: admin
