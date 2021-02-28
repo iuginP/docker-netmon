@@ -24,15 +24,24 @@ To connect to grafana go to http://localhost:3000
 
 ## Grafana configuration
 
-Create and set the right permissions to the grafana data dir:
+1.  Create and set the right permissions to the grafana data dir:
 
-```shell
-mkdir -p grafana_data/data/grafana/
-sudo chown -R 472:1 grafana_data/data/grafana/
-```
+    ```shell
+    mkdir -p grafana_data/data/grafana/
+    sudo chown -R 472:1 grafana_data/data/grafana/
+    ```
+2.  Login and set password
 
 Grafana will require to be configured the first time the project is executed. The default credentials are:
 * username: admin
 * password: admin
 
-To display the default dashboard, you need to import it from: https://github.com/iuginP/docker-netmon/blob/master/grafana_speedtest_dashboard.yaml
+3.  Connect to the influxdb source:
+    
+    * Host: http://influxdb:8086
+    * Database: internetspeed
+    * User: speedmonitor
+    * Password: speedpassword
+    * Method: GET
+
+5.  Load the default dashboard from json: https://github.com/iuginP/docker-netmon/blob/master/grafana_speedtest_dashboard.json
