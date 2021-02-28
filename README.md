@@ -8,7 +8,7 @@ It also provides a basic docker-compose configuration for a standalone system th
 To clone the project:
 
 ```shell
-git pull https://github.com/iuginP/docker-netmon.git
+git clone https://github.com/iuginP/docker-netmon.git
 cd docker-netmon
 ```
 
