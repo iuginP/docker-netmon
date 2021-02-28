@@ -20,7 +20,7 @@ To run NetMon:
 docker-compose up -d --build
 ```
 
-To connect to grafana go to https://localhost:3000
+To connect to grafana go to http://localhost:3000
 
 ## Grafana configuration
 
